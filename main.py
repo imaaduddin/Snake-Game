@@ -1,6 +1,9 @@
 import pygame
 from pygame.locals import *
 
+def draw_block():
+  surface.blit(block, block_x, block_y)
+  pygame.display.flip()
 
 
 if __name__ == "__main__":
@@ -10,7 +13,9 @@ if __name__ == "__main__":
   surface.fill((73, 179, 101))
 
   block = pygame.image.load("resources/block.jpg").convert()
-  surface.blit(block, (100, 100))
+  block_x = 100
+  block_y = 100
+  surface.blit(block, (block_x, block_y))
 
 
   pygame.display.flip()
@@ -22,5 +27,14 @@ if __name__ == "__main__":
       if event.type == KEYDOWN:
         if event.key == K_ESCAPE:
           running = False
+
+        if event.key == K_UP:
+          block_y = block_y - 10
+
+        if event.key == K_DOWN:
+          block_y = block_y + 10
+
+
+
       elif event.type == QUIT:
         running = False
