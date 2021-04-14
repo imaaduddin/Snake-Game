@@ -2,7 +2,8 @@ import pygame
 from pygame.locals import *
 
 def draw_block():
-  surface.blit(block, block_x, block_y)
+  surface.fill((73, 179, 101))
+  surface.blit(block, (block_x, block_y))
   pygame.display.flip()
 
 
