@@ -20,6 +20,7 @@ if __name__ == "__main__":
   while running:
     for event in pygame.event.get():
       if event.type == KEYDOWN:
-        pass
+        if event.key == K_ESCAPE:
+          running = False
       elif event.type == QUIT:
         running = False
