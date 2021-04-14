@@ -30,9 +30,19 @@ if __name__ == "__main__":
 
         if event.key == K_UP:
           block_y = block_y - 10
+          draw_block()
 
         if event.key == K_DOWN:
           block_y = block_y + 10
+          draw_block()
+
+        if event.key == K_LEFT:
+          block_x = block_x - 10
+          draw_block()
+
+        if event.key == K_RIGHT:
+          block_x += 10
+          draw_block()
 
 
 
