@@ -1,6 +1,13 @@
 import pygame
 from pygame.locals import *
 
+class Game:
+  def __init__(self):
+    pass
+
+  def run(self):
+    pass
+
 def draw_block():
   surface.fill((73, 179, 101))
   surface.blit(block, (block_x, block_y))
@@ -8,6 +15,8 @@ def draw_block():
 
 
 if __name__ == "__main__":
+  game = Game()
+  game.run()
   pygame.init()
 
   surface = pygame.display.set_mode((1000, 500))
