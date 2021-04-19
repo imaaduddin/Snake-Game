@@ -4,11 +4,11 @@ from pygame.locals import *
 class Game:
   def __init__(self):
     pygame.init()
-    self.snake = Snake()
+    self.surface = pygame.display.set_mode((1000, 500))
+    self.snake = Snake(self.surface)
     self.snake.draw()
 
   def run(self):
-    surface = pygame.display.set_mode((1000, 500))
     running = True
 
     while running:
@@ -18,7 +18,7 @@ class Game:
             running = False
 
           if event.key == K_UP:
-            block_y = block_y - 10
+            self.snake.move_up()
           
 
           if event.key == K_DOWN:
@@ -48,6 +48,10 @@ class Snake:
     self.parent_screen.blit(self.block, (self.x, self.y))
     pygame.display.flip()
 
+
+def move_up(self):
+  self.y = self.y - 10
+  self.draw()
 
 if __name__ == "__main__":
   game = Game()
