@@ -22,15 +22,15 @@ class Game:
           
 
           if event.key == K_DOWN:
-            block_y = block_y + 10
+            self.snake.move_down()
           
 
           if event.key == K_LEFT:
-            block_x = block_x - 10
+            self.snake.move_left()
           
 
           if event.key == K_RIGHT:
-            block_x += 10
+            self.snake.move_right()
           
         elif event.type == QUIT:
           running = False
@@ -51,6 +51,18 @@ class Snake:
 
 def move_up(self):
   self.y = self.y - 10
+  self.draw()
+
+def move_down(self):
+  self.y = self.y + 10
+  self.draw()
+
+def move_left(self):
+  self.x = self.x - 10
+  self.draw()
+
+def move_right(self):
+  self.x = self.x + 10
   self.draw()
 
 if __name__ == "__main__":
