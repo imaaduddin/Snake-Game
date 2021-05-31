@@ -49,21 +49,21 @@ class Snake:
     pygame.display.flip()
 
 
-def move_up(self):
-  self.y = self.y - 10
-  self.draw()
+  def move_up(self):
+    self.y = self.y - 10
+    self.draw()
 
-def move_down(self):
-  self.y = self.y + 10
-  self.draw()
+  def move_down(self):
+    self.y = self.y + 10
+    self.draw()
 
-def move_left(self):
-  self.x = self.x - 10
-  self.draw()
+  def move_left(self):
+    self.x = self.x - 10
+    self.draw()
 
-def move_right(self):
-  self.x = self.x + 10
-  self.draw()
+  def move_right(self):
+    self.x = self.x + 10
+    self.draw()
 
 if __name__ == "__main__":
   game = Game()
